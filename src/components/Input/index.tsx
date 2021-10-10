@@ -3,6 +3,7 @@ import { Container, FormLabel } from './styles';
 type InputProp = {
   placeholder?: string;
   label?: string;
+  unit?: string;
 };
 
 export const InputLocation: React.FC<InputProp> = ({ placeholder }) => {
@@ -56,13 +57,15 @@ export const InputSelect: React.FC = () => {
   );
 };
 
-export const InputLabel: React.FC<InputProp> = ({ label }) => {
+export const InputLabel: React.FC<InputProp> = ({ label, unit }) => {
   return (
     <FormLabel>
       <input type="text" className="labelInput" id={label} />
+
       <label className="label" htmlFor={label}>
         {label}
       </label>
+      <span className="unit">{unit}</span>
     </FormLabel>
   );
 };

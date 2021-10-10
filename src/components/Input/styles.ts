@@ -48,6 +48,7 @@ export const FormLabel = styled.div`
     border-radius: 0.4rem;
     background: none;
     font-family: inherit;
+    position: relative;
 
     &:focus {
       outline: none;
@@ -80,5 +81,13 @@ export const FormLabel = styled.div`
     font-weight: 700;
     background-color: #fff;
     padding: 0 0.6rem;
+  }
+
+  .unit {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    color: ${Theme.colorPallete.darkGrey};
   }
 `;

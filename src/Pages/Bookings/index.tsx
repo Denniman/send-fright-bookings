@@ -117,8 +117,8 @@ const Bookings: React.FC = () => {
               </DimensionsCard>
             </div>
             <div className="cargo--dimensions">
-              <InputLabel label="Total Volume" />
-              <InputLabel label="Total Weight" />
+              <InputLabel label="Total Volume" unit="cbm" />
+              <InputLabel label="Total Weight" unit="kg" />
             </div>
           </Section>
 
