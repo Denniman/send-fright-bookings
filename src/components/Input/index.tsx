@@ -23,11 +23,7 @@ export const InputLocation: React.FC<InputProp> = ({ placeholder }) => {
 export const InputDate: React.FC = () => {
   return (
     <Container>
-      <input
-        type="date"
-        className="location--input date-picker"
-        value="Ready Date"
-      />
+      <input type="date" className="location--input date-picker" />
     </Container>
   );
 };
@@ -46,8 +42,8 @@ export const InputText: React.FC<InputProp> = ({ placeholder }) => {
 export const InputSelect: React.FC = () => {
   return (
     <Container>
-      <select className="location--input select">
-        <option selected disabled>
+      <select className="location--input select" defaultValue={'Incoterms'}>
+        <option value="Incoterms" disabled>
           Incoterms
         </option>
         <option>Incoterms</option>

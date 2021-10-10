@@ -12,7 +12,7 @@ const Navigation = () => {
         <span>send</span> FREIGHT
       </BrandText>
       <form action="" className="search" onSubmit={sumbitHandler}>
-        <InputSearch type="text" placeholder="Search" />
+        <InputSearch type="text" placeholder="Search" name="search" />
         <button className="search__button">
           <SearchIcon />
         </button>
