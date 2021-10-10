@@ -5,7 +5,7 @@ type InputProp = {
   label?: string;
 };
 
-const InputLocation: React.FC<InputProp> = ({ placeholder }) => {
+export const InputLocation: React.FC<InputProp> = ({ placeholder }) => {
   return (
     <Container>
       <span className="icon">
@@ -66,5 +66,3 @@ export const InputLabel: React.FC<InputProp> = ({ label }) => {
     </FormLabel>
   );
 };
-
-export default InputLocation;

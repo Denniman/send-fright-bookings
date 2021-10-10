@@ -6,7 +6,11 @@ import Truck from '../../assets/icons/svg/truck.svg';
 import Custom from '../../assets/icons/svg/policeman.svg';
 
 export const Container = styled.main`
-  padding: 1.5rem 8rem;
+  padding: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding: 1.5rem 8rem;
+  }
 
   .arrowback--wrapper {
     display: flex;
@@ -22,10 +26,15 @@ export const Container = styled.main`
   }
 
   .section-wrapper {
-    margin: 1.3rem 12rem;
+    margin: 0 1.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2rem;
+
+    @media (min-width: 768px) {
+      margin: 0 12rem;
+    }
   }
 
   .card--wrapper {
@@ -66,10 +75,10 @@ export const Container = styled.main`
       &::before {
         content: '';
         position: absolute;
-        top: -13px;
+        top: -11px;
         left: -3px;
         width: 1.4px;
-        height: 3.9rem;
+        height: 3.8rem;
         background: ${Theme.colorPallete.lightGrey};
       }
     }
@@ -169,7 +178,8 @@ export const CardPlane = styled.div`
 `;
 
 export const TextSecondary = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
 `;
 
 export const CardTruck = styled.div`
@@ -207,14 +217,14 @@ export const CardCustom = styled.div`
 
 export const DimensionsCard = styled.div`
   background-color: ${Theme.colorPallete.mediumGrey};
-  padding: 0.3rem 0;
-  padding-right: 1.7rem;
+  padding: 0.28rem 0;
+  padding-right: 2rem;
   padding-left: 0.3rem;
   font-size: 1.2rem;
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   color: ${Theme.colorPallete.darkGrey};
 
   .card-total {

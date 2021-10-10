@@ -1,11 +1,15 @@
-import InputLocation, {
+import React from 'react';
+import { ToggleButton } from '../../components/ToggleButton';
+import { ArrowLeftIcon, ErrorIcon } from '../../assets/icons';
+import Navigation from '../../components/Navigation';
+import {
   InputDate,
   InputLabel,
   InputSelect,
   InputText,
+  InputLocation,
 } from '../../components/Input';
-import { ArrowLeftIcon, ErrorIcon } from '../../assets/icons';
-import Navigation from '../../components/Navigation';
+
 import {
   Container,
   TextPrimary,
@@ -18,9 +22,8 @@ import {
   CardCustom,
   DimensionsCard,
 } from './styles';
-import { ToggleButton } from '../../components/ToggleButton';
 
-const Bookings = () => {
+const Bookings: React.FC = () => {
   return (
     <>
       <Navigation />

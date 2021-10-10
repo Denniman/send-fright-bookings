@@ -13,7 +13,7 @@ export const Container = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    flex-basis: 55%;
     &__button {
       border: none;
       outline: none;
@@ -69,4 +69,5 @@ export const InputSearch = styled.input`
 export const Nav = styled.nav`
   display: flex;
   gap: 2rem;
+  margin-left: 9rem;
 `;
