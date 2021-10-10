@@ -1,5 +1,10 @@
-import InputLocation from '../../components/Input';
-import { ArrowLeftIcon } from '../../assets/icons';
+import InputLocation, {
+  InputDate,
+  InputLabel,
+  InputSelect,
+  InputText,
+} from '../../components/Input';
+import { ArrowLeftIcon, ErrorIcon } from '../../assets/icons';
 import Navigation from '../../components/Navigation';
 import {
   Container,
@@ -11,7 +16,9 @@ import {
   CardPlane,
   CardTruck,
   CardCustom,
+  DimensionsCard,
 } from './styles';
+import { ToggleButton } from '../../components/ToggleButton';
 
 const Bookings = () => {
   return (
@@ -56,14 +63,107 @@ const Bookings = () => {
           </Section>
 
           <Section>
-            <div className="alert-wrapper"></div>
+            <div className="alert-wrapper">
+              <ErrorIcon />
+            </div>
             <div className="input--wrapper">
-              <InputLocation placeholder="From City or port" />
+              <div className="input--card">
+                <div className="import">Import</div>
+                <div className="input--card__export">Export</div>
+              </div>
+              <div className="input--location__from">
+                <InputLocation placeholder="From City or port" />
+              </div>
+
+              <div className="input--location__to">
+                <InputLocation placeholder="To City or port" />
+              </div>
+            </div>
+
+            <div className="input--wrapper mt-3">
+              <div className="input__date">
+                <InputDate />
+              </div>
+
+              <div className="input__incoterms">
+                <InputSelect />
+              </div>
+
+              <div className="input__cargo">
+                <InputText placeholder="Total Cargo Value" />
+              </div>
             </div>
           </Section>
 
           <Section>
-            <TextPrimary>Cargo Details</TextPrimary>
+            <div className="cargo--header">
+              <TextPrimary>Cargo Details</TextPrimary>
+              <div className="cargo--toggle__btn">
+                <ToggleButton />
+
+                <TextSecondary>
+                  Dangerous Cargo (ex. Chemicals, Battery)
+                </TextSecondary>
+              </div>
+            </div>
+
+            <div className="cargo--dimensions">
+              <DimensionsCard>
+                <div className="card-total">Total Dimensions</div>
+                Package Details
+              </DimensionsCard>
+            </div>
+            <div className="cargo--dimensions">
+              <InputLabel label="Total Volume" />
+              <InputLabel label="Total Weight" />
+            </div>
+          </Section>
+
+          <Section>
+            <TextPrimary>Additional Services</TextPrimary>
+
+            <div className="services mt-3">
+              <div className="services__item">
+                <ToggleButton />
+                <div>
+                  <TextPrimary>Exporting Forwarding</TextPrimary>
+                  <TextTertiary>
+                    We handle customs clearance and documentation.
+                  </TextTertiary>
+                </div>
+              </div>
+              <div className="services__item">
+                <ToggleButton />
+
+                <div>
+                  <TextPrimary>Import Customs Clearance</TextPrimary>
+                  <TextTertiary>
+                    We handle import customs and regulatory requirements.
+                  </TextTertiary>
+                </div>
+              </div>
+            </div>
+            <div className="services mt-3">
+              <div className="services__item">
+                <ToggleButton />
+                <div>
+                  <TextPrimary>Cargo Insurance</TextPrimary>
+                  <TextTertiary>
+                    We handle cargo from logistics risk up to its full value.
+                  </TextTertiary>
+                </div>
+              </div>
+              <div className="services__item">
+                <ToggleButton />
+
+                <div>
+                  <TextPrimary>Transport /Delivery</TextPrimary>
+                  <TextTertiary>
+                    We deliver the cargo to your door steps from the ports.
+                  </TextTertiary>
+                </div>
+              </div>
+            </div>
           </Section>
         </div>
       </Container>

@@ -5,6 +5,7 @@ const colorPallete = {
   blue: '#070765',
   lighGreen: '#5CC882',
   themeBlue: '#0944A8',
+  mediumGrey: '#f4f4f4',
 };
 
 const Theme = {
