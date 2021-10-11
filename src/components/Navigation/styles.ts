@@ -38,6 +38,22 @@ export const Container = styled.header`
     padding: 0.8rem 1.6rem;
     border-radius: 0.4rem;
   }
+
+  .harmbugger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.41rem;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .harmbugger > .menu {
+    width: 2.7rem;
+    height: 0.4rem;
+    background-color: currentColor;
+  }
 `;
 
 export const BrandText = styled.h1`
@@ -67,7 +83,11 @@ export const InputSearch = styled.input`
 `;
 
 export const Nav = styled.nav`
-  display: flex;
+  display: none;
   gap: 2rem;
   margin-left: 9rem;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;

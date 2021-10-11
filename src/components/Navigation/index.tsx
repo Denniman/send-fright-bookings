@@ -31,6 +31,12 @@ const Navigation = () => {
           Book Shipment
         </Link>
       </Nav>
+
+      <div className="harmbugger">
+        <div className="menu"></div>
+        <div className="menu"></div>
+        <div className="menu"></div>
+      </div>
     </Container>
   );
 };
