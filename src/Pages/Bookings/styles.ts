@@ -15,7 +15,10 @@ export const Container = styled.main`
   .arrowback--wrapper {
     display: flex;
     align-items: flex-start;
-    gap: 10rem;
+    gap: 0.3rem;
+    @media (min-width: 768px) {
+      gap: 10rem;
+    }
   }
 
   .quotetext--wrapper {
@@ -26,7 +29,7 @@ export const Container = styled.main`
   }
 
   .section-wrapper {
-    margin: 0 1.5rem;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,6 +42,17 @@ export const Container = styled.main`
 
   .card--wrapper {
     display: flex;
+
+    &__item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
   }
 
   .input__date,
@@ -100,17 +114,28 @@ export const Container = styled.main`
 
   .cargo--dimensions {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     gap: 2rem;
     margin-top: 3rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   .services {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 1.3rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
 
     &__item {
+      width: 100%;
       display: flex;
       align-items: center;
       gap: 1.3rem;
@@ -129,8 +154,12 @@ export const TextTertiary = styled.p`
 
 export const Section = styled.section`
   background-color: ${Theme.colorPallete.white};
-  padding: 2rem 6rem;
+  padding: 2rem;
   border-radius: 0.4rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem 6rem;
+  }
 
   .card--wrapper {
     margin-top: 1rem;
@@ -152,7 +181,7 @@ export const Card = styled.div`
   background-repeat: no-repeat;
   background-position: bottom -17px right -10px;
   background-size: 6rem;
-  width: 20rem;
+  width: 100%;
   height: 6rem;
   border: 1px solid ${Theme.colorPallete.lightGrey};
   p {
@@ -167,7 +196,7 @@ export const CardPlane = styled.div`
   background-repeat: no-repeat;
   background-position: bottom -20px right -20px;
   background-size: 7rem;
-  width: 20rem;
+  width: 100%;
   height: 6rem;
   background-color: ${Theme.colorPallete.themeBlue};
 
@@ -189,7 +218,7 @@ export const CardTruck = styled.div`
   background-repeat: no-repeat;
   background-position: bottom -10px right -6px;
   background-size: 6rem;
-  width: 20rem;
+  width: 100%;
   height: 6rem;
   border: 1px solid ${Theme.colorPallete.lightGrey};
 
@@ -205,7 +234,7 @@ export const CardCustom = styled.div`
   background-repeat: no-repeat;
   background-position: bottom -17px right -19px;
   background-size: 7rem;
-  width: 20rem;
+  width: 100%;
   height: 6rem;
   border: 1px solid ${Theme.colorPallete.lightGrey};
 

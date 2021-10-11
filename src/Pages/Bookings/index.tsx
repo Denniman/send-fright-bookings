@@ -43,25 +43,28 @@ const Bookings: React.FC = () => {
           <Section>
             <TextPrimary>Select a service</TextPrimary>
             <div className="card--wrapper">
-              <CardPlane>
-                <p>Air Freight</p>
-              </CardPlane>
-              <Card>
-                <p>Sea Freight</p>
-              </Card>
+              <div className="card--wrapper__item">
+                <CardPlane>
+                  <p>Air Freight</p>
+                </CardPlane>
+                <Card>
+                  <p>Sea Freight</p>
+                </Card>
+              </div>
+              <div className="card--wrapper__item">
+                <CardTruck>
+                  <p>
+                    Inland <br /> (Truck & Barge)
+                  </p>
+                </CardTruck>
 
-              <CardTruck>
-                <p>
-                  Inland <br /> (Truck & Barge)
-                </p>
-              </CardTruck>
-
-              <CardCustom>
-                <p>
-                  Custom <br />
-                  Clearance
-                </p>
-              </CardCustom>
+                <CardCustom>
+                  <p>
+                    Custom <br />
+                    Clearance
+                  </p>
+                </CardCustom>
+              </div>
             </div>
           </Section>
 

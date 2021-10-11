@@ -42,13 +42,13 @@ export const Container = styled.div`
 export const FormLabel = styled.div`
   position: relative;
   .labelInput {
+    width: 100%;
     outline: none;
     padding: 1rem 2rem;
     border: 2px solid ${Theme.colorPallete.lightGrey};
     border-radius: 0.4rem;
     background: none;
     font-family: inherit;
-    position: relative;
 
     &:focus {
       outline: none;
