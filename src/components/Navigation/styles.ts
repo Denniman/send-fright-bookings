@@ -23,20 +23,19 @@ export const Container = styled.header`
 
   .link {
     text-decoration: none;
-    color: ${Theme.colorPallete.white};
+    border-radius: 0.4rem;
     font-size: 1.5rem;
-    border: 1px solid ${Theme.colorPallete.white};
     padding: 0.8rem 1.6rem;
     border-radius: 0.4rem;
+    color: ${Theme.colorPallete.white};
   }
 
   .active {
-    text-decoration: none;
     background-color: ${Theme.colorPallete.lighGreen};
-    color: ${Theme.colorPallete.white};
-    font-size: 1.5rem;
-    padding: 0.8rem 1.6rem;
-    border-radius: 0.4rem;
+  }
+
+  .in-active {
+    border: 1px solid ${Theme.colorPallete.white};
   }
 
   .harmbugger {

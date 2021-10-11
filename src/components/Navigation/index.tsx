@@ -24,10 +24,10 @@ const Navigation = () => {
       </form>
 
       <Nav>
-        <Link to="/" className="link">
+        <Link to="/" className="link in-active">
           Request Quote
         </Link>
-        <Link to="/" className="active">
+        <Link to="/" className="link active">
           Book Shipment
         </Link>
       </Nav>
