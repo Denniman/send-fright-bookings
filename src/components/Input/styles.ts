@@ -37,6 +37,26 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  .date-picker {
+    padding: 1rem 3.5rem;
+    border: none;
+    background-color: #f4f4f4;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .dateicon--wrapper {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.8rem;
+  }
+
+  .date--icon {
+    width: 2rem;
+  }
 `;
 
 export const FormLabel = styled.div`

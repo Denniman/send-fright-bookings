@@ -1,4 +1,5 @@
 import { Container, FormLabel } from './styles';
+import { CalenderFillIcon } from '../../assets/icons';
 
 type InputProp = {
   placeholder?: string;
@@ -20,10 +21,18 @@ export const InputLocation: React.FC<InputProp> = ({ placeholder }) => {
     </Container>
   );
 };
+
 export const InputDate: React.FC = () => {
   return (
     <Container>
-      <input type="date" className="location--input date-picker" />
+      <span className="dateicon--wrapper">
+        <CalenderFillIcon className="date--icon" />
+      </span>
+      <input
+        type="text"
+        className="location--inpu date-picker"
+        placeholder="Ready Date"
+      />
     </Container>
   );
 };
