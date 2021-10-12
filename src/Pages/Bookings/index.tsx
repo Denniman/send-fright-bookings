@@ -132,7 +132,7 @@ const Bookings: React.FC = () => {
               <div className="services__item">
                 <ToggleButton />
                 <div>
-                  <TextPrimary>Exporting Forwarding</TextPrimary>
+                  <TextPrimary>Export Forwarding</TextPrimary>
                   <TextTertiary>
                     We handle customs clearance and documentation.
                   </TextTertiary>
